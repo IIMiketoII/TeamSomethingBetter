@@ -23,6 +23,12 @@ public class leaderMovement : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        // ignore friends
+        if (col.gameObject.tag == "friend")
+        {
+            Physics.IgnoreCollision(col.transform.GetComponent<Collider>(), GetComponent<Collider>());
+        }
     }
 
     // Update is called once per frame
@@ -44,8 +50,5 @@ public class leaderMovement : MonoBehaviour
             rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
             isGrounded = false;
         }
-
-        // Ignore friends
-
     }
 }

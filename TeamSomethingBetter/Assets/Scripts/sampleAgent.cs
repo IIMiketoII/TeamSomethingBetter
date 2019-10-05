@@ -17,6 +17,10 @@ public class sampleAgent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 nextPos = agent.nextPosition;
+        Vector3 correctPos = new Vector3(nextPos.x,nextPos.y,0);
+        transform.position = correctPos;
+
         agent.SetDestination(target.position);
     }
 }

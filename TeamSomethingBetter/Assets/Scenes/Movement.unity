@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -170,7 +170,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 18f25b0fb2a9b894e9d8a347a0274c86, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 620665931}
   - component: {fileID: 620665930}
   - component: {fileID: 620665935}
+  - component: {fileID: 620665936}
   m_Layer: 0
   m_Name: slimeRed
   m_TagString: friend
@@ -369,7 +370,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b69a66f2028736f49838d05ef48172d0, type: 2}
+  - {fileID: 2100000, guid: 6c704a1914fe45742bba0bef09a198b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -406,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620665929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2584782, y: 1.16, z: 2.86802}
+  m_LocalPosition: {x: -1.2584782, y: 1.16, z: 0}
   m_LocalScale: {x: 1.8819, y: 1.8819, z: 1.8819}
   m_Children: []
   m_Father: {fileID: 0}
@@ -428,6 +429,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &620665936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620665929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9006df312aeb9d34f803e6141e5e6d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1450251172
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +456,7 @@ GameObject:
   - component: {fileID: 1450251173}
   - component: {fileID: 1450251179}
   - component: {fileID: 1450251174}
+  - component: {fileID: 1450251180}
   m_Layer: 0
   m_Name: slimeBlue
   m_TagString: friend
@@ -518,7 +532,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9f1ffb19eb577e45b12ca43e846c879, type: 2}
+  - {fileID: 2100000, guid: b8c4bb262333ad54e84b01dc483c08f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -555,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450251172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.71, y: 1.16, z: 2.86802}
+  m_LocalPosition: {x: 2.71, y: 1.16, z: 0}
   m_LocalScale: {x: 1.8819, y: 1.8819, z: 1.8819}
   m_Children: []
   m_Father: {fileID: 0}
@@ -574,6 +588,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 620665934}
+--- !u!114 &1450251180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450251172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9006df312aeb9d34f803e6141e5e6d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1670553059
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +698,7 @@ GameObject:
   - component: {fileID: 1905270555}
   - component: {fileID: 1905270556}
   - component: {fileID: 1905270561}
+  - component: {fileID: 1905270562}
   m_Layer: 0
   m_Name: slimeGreen
   m_TagString: friend
@@ -738,7 +765,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8dd04fd9bf2f30c4d9f96577a695fdf6, type: 2}
+  - {fileID: 2100000, guid: a5c354cb40b4c5d4ea99b7df21fbec30, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -775,7 +802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905270554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.98, y: 1.16, z: 2.86802}
+  m_LocalPosition: {x: -4.98, y: 1.16, z: 0}
   m_LocalScale: {x: 1.8819, y: 1.8819, z: 1.8819}
   m_Children: []
   m_Father: {fileID: 0}
@@ -803,3 +830,15 @@ NavMeshAgent:
   m_BaseOffset: 0.50000006
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1905270562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905270554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9006df312aeb9d34f803e6141e5e6d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
