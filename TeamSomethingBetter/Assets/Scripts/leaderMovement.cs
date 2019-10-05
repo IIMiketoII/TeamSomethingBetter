@@ -15,12 +15,13 @@ public class leaderMovement : MonoBehaviour
     bool wKeyDown = false;
     bool spaceKeyDown = false;
     Rigidbody rb;
-
+    AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        sound = GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter(Collision col)
@@ -72,6 +73,7 @@ public class leaderMovement : MonoBehaviour
             {
                 if (isGrounded == true)
                 {
+                    sound.Play();
                     rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
                     Debug.Log("I HAVE JUMPED");
                     isGrounded = false;
