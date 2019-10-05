@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Teleport : MonoBehaviour
+public class Dash : MonoBehaviour
 {
     public float dashDistance = 10f;
     public float dashSpeed = 40f;
     public Rigidbody player;
 
+    public LeaderMovement movement;
+
     bool facingRight = true;
     bool aKey = false;
     bool dKey = false;
-    bool kKeyUp = false;
+    bool kKeyDown = false;
 
     bool dashing = false;
     Vector3 startPoint;
@@ -34,13 +36,13 @@ public class Teleport : MonoBehaviour
         {
             dKey = false;
         }
-        if (Input.GetKeyUp("k"))
+        if (Input.GetKeyDown("k"))
         {
-            kKeyUp = true;
+            kKeyDown = true;
         }
         else
         {
-            kKeyUp = false;
+            kKeyDown = false;
         }
     }
 
@@ -56,7 +58,7 @@ public class Teleport : MonoBehaviour
         }
 
         
-        if (kKeyUp)
+        if (kKeyDown && movement.isGrounded)
         {
             if (facingRight)
             {
@@ -77,6 +79,7 @@ public class Teleport : MonoBehaviour
             if (Mathf.Abs(transform.position.x - startPoint.x) > dashDistance)
             {
                 player.AddForce(-player.GetPointVelocity(transform.position), ForceMode.VelocityChange);
+                dashing = false;
             }
         }
     }

@@ -4,9 +4,11 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
-public class leaderMovement : MonoBehaviour
+public class LeaderMovement : MonoBehaviour
 {
     public float speed;
+
+    public bool isLeader = true;
     public bool isGrounded;
     Rigidbody rb;
 
@@ -26,23 +28,36 @@ public class leaderMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        // Move right
-        if(Input.GetKey(KeyCode.D))
+        if (isLeader)
         {
-            transform.Translate(speed * Time.deltaTime,0,0);
-        }
-        // Move left
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(-speed * Time.deltaTime, 0, 0);
-        }
-        // Jump
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isGrounded)
-        {
-            rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
-            isGrounded = false;
+            // Move right
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.AddForce(speed, 0, 0, ForceMode.VelocityChange);
+                //transform.Translate(speed * Time.deltaTime, 0, 0);
+            }
+            else
+            {
+                rb.AddForce(-rb.GetPointVelocity(transform.position));
+            }
+            // Move left
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.AddForce(-speed, 0, 0, ForceMode.VelocityChange);
+                //transform.Translate(-speed * Time.deltaTime, 0, 0);
+            }
+            else
+            {
+                rb.AddForce(-rb.GetPointVelocity(transform.position));
+            }
+            // Jump
+            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isGrounded)
+            {
+                rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                isGrounded = false;
+            }
         }
 
         // Ignore friends
