@@ -7,6 +7,7 @@ TagManager:
   - Climbable
   - ground
   - friend
+  - GrappleNode
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - PostProcessing
   - Slimes
-  - 
+  - Ground
   - 
   - 
   - 
