@@ -12,6 +12,7 @@ public class leaderMovement : MonoBehaviour
 
     public bool isLeader;
     public bool isGrounded;
+    public bool hasJumped;
     bool wKeyDown = false;
     bool spaceKeyDown = false;
     Rigidbody rb;
@@ -51,6 +52,7 @@ public class leaderMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        hasJumped = false;
         if (isLeader)
         {
             GetComponent<NavMeshAgent>().enabled = false;
@@ -74,13 +76,8 @@ public class leaderMovement : MonoBehaviour
                 if (isGrounded == true)
                 {
                     sound.Play();
+                    hasJumped = true;
                     rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
-                    //WaitForSeconds(5);
-                    blue.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
-                    Debug.Log(blue.GetComponent<Transform>().position);
-                    green.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
-                    //eventManager.TriggerEvent("jump");
-                    //Debug.Log("event jump");
                     Debug.Log("I HAVE JUMPED");
                     isGrounded = false;
                 }
