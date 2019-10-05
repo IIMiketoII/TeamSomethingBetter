@@ -1,21 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
 
-public class LeaderMovement : MonoBehaviour
+public class leaderMovement : MonoBehaviour
 {
     public float speed;
 
-    public bool isLeader = true;
+    public bool isLeader;
     public bool isGrounded;
+    bool wKeyDown = false;
+    bool spaceKeyDown = false;
     Rigidbody rb;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 6;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -24,6 +27,7 @@ public class LeaderMovement : MonoBehaviour
         if (col.gameObject.name == ("ground") && isGrounded == false)
         {
             isGrounded = true;
+            Debug.Log("I have landed");
         }
 
         // ignore friends
@@ -33,37 +37,47 @@ public class LeaderMovement : MonoBehaviour
         }
     }
 
+    void OnCollisionExit(Collision col)
+    {
+        if (col.gameObject.tag == ("ground"))
+        {
+            isGrounded = false;
+        }
+    }
+
+
     // Update is called once per frame
     void FixedUpdate()
     {
         if (isLeader)
         {
+            GetComponent<NavMeshAgent>().enabled = false;
+
             // Move right
             if (Input.GetKey(KeyCode.D))
             {
-                rb.AddForce(speed, 0, 0, ForceMode.VelocityChange);
-                //transform.Translate(speed * Time.deltaTime, 0, 0);
-            }
-            else
-            {
-                rb.AddForce(-rb.GetPointVelocity(transform.position));
+                rb.AddForce(transform.right * Time.deltaTime * speed, ForceMode.VelocityChange);
             }
             // Move left
             if (Input.GetKey(KeyCode.A))
             {
-                rb.AddForce(-speed, 0, 0, ForceMode.VelocityChange);
-                //transform.Translate(-speed * Time.deltaTime, 0, 0);
+                rb.AddForce(transform.right * Time.deltaTime * -speed, ForceMode.VelocityChange);
             }
-            else
-            {
-                rb.AddForce(-rb.GetPointVelocity(transform.position));
-            }
+
             // Jump
-            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isGrounded)
+            if (((Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.Space))))
             {
-                rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
-                isGrounded = false;
+                if (isGrounded == true)
+                {
+                    rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                    Debug.Log("I HAVE JUMPED");
+                    isGrounded = false;
+                }
             }
+        }
+        else
+        {
+            GetComponent<NavMeshAgent>().enabled = true;
         }
     }
 }
