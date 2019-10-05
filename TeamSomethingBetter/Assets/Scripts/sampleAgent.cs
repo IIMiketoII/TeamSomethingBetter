@@ -11,6 +11,7 @@ public class sampleAgent : MonoBehaviour
     public GameObject red;
     public GameObject green;
     public GameObject blue;
+    //RigidBody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class sampleAgent : MonoBehaviour
         red = GameObject.Find("slimeRed");
         green = GameObject.Find("slimeGreen");
         blue = GameObject.Find("slimeBlue");
+        //rb = GetComponent<Rigidbody>();
 
     }
 
@@ -38,6 +40,7 @@ public class sampleAgent : MonoBehaviour
             if (green.GetComponent<NavMeshAgent>().enabled == true && blue.GetComponent<NavMeshAgent>().enabled == true)
             {
                 blue.GetComponent<NavMeshAgent>().SetDestination(target.position);
+                //Debug.Log();
                 green.GetComponent<NavMeshAgent>().SetDestination(target2.position);
             }
         }
@@ -48,6 +51,7 @@ public class sampleAgent : MonoBehaviour
             if (red.GetComponent<NavMeshAgent>().enabled == true && green.GetComponent<NavMeshAgent>().enabled == true)
             {
                 red.GetComponent<NavMeshAgent>().SetDestination(target2.position);
+                Debug.Log(target2.position);
                 green.GetComponent<NavMeshAgent>().SetDestination(target.position);
             }
         }
@@ -61,6 +65,8 @@ public class sampleAgent : MonoBehaviour
                 blue.GetComponent<NavMeshAgent>().SetDestination(target2.position);
             }
         }
+
+        // Jump together
 
 
         //agent.SetDestination(target.position);
