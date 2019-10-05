@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -14,6 +15,7 @@ public class leaderMovement : MonoBehaviour
     bool spaceKeyDown = false;
     Rigidbody rb;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class leaderMovement : MonoBehaviour
         if (col.gameObject.name == ("ground") && isGrounded == false)
         {
             isGrounded = true;
+            Debug.Log("I have landed");
         }
 
         // ignore friends
@@ -36,38 +39,20 @@ public class leaderMovement : MonoBehaviour
 
     void OnCollisionExit(Collision col)
     {
-        if (col.gameObject.name == ("ground"))
+        if (col.gameObject.tag == ("ground"))
         {
             isGrounded = false;
         }
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            wKeyDown = true;
-        }
-        else
-        {
-            wKeyDown = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            spaceKeyDown = true;
-        }
-        else
-        {
-            spaceKeyDown = false;
-        }
-    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if (isLeader)
         {
+            GetComponent<NavMeshAgent>().enabled = false;
+
             // Move right
             if (Input.GetKey(KeyCode.D))
             {
@@ -80,11 +65,19 @@ public class leaderMovement : MonoBehaviour
             }
 
             // Jump
-            if ((wKeyDown || spaceKeyDown) && isGrounded)
+            if (((Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.Space))))
             {
-                rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
-                isGrounded = false;
+                if (isGrounded == true)
+                {
+                    rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                    Debug.Log("I HAVE JUMPED");
+                    isGrounded = false;
+                }
             }
+        }
+        else
+        {
+            GetComponent<NavMeshAgent>().enabled = true;
         }
     }
 }
