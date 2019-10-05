@@ -8,7 +8,7 @@ public class Dash : MonoBehaviour
     public float dashSpeed = 40f;
     public Rigidbody player;
 
-    public LeaderMovement movement;
+    public leaderMovement movement;
 
     bool facingRight = true;
     bool aKey = false;

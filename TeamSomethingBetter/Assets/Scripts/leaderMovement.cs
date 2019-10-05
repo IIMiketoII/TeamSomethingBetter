@@ -4,18 +4,18 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
-public class LeaderMovement : MonoBehaviour
+public class leaderMovement : MonoBehaviour
 {
     public float speed;
 
     public bool isLeader = true;
     public bool isGrounded;
     Rigidbody rb;
+    Vector3 vel;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 6;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -33,31 +33,36 @@ public class LeaderMovement : MonoBehaviour
         }
     }
 
+    void OnCollisionExit(Collision col)
+    {
+        if (col.gameObject.name == ("ground"))
+        {
+            isGrounded = false;
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
+        vel = rb.velocity;
         if (isLeader)
         {
-            // Move right
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
-                rb.AddForce(speed, 0, 0, ForceMode.VelocityChange);
-                //transform.Translate(speed * Time.deltaTime, 0, 0);
+                // Move right
+                if (Input.GetKey(KeyCode.D))
+                {
+                    rb.AddForce(transform.right * Time.deltaTime * speed);
+                    //transform.Translate(speed * Time.deltaTime, 0, 0);
+                }
+                // Move left
+                if (Input.GetKey(KeyCode.A))
+                {
+                    rb.AddForce(transform.right * Time.deltaTime * -speed);
+                    //transform.Translate(-speed * Time.deltaTime, 0, 0);
+                }
             }
-            else
-            {
-                rb.AddForce(-rb.GetPointVelocity(transform.position));
-            }
-            // Move left
-            if (Input.GetKey(KeyCode.A))
-            {
-                rb.AddForce(-speed, 0, 0, ForceMode.VelocityChange);
-                //transform.Translate(-speed * Time.deltaTime, 0, 0);
-            }
-            else
-            {
-                rb.AddForce(-rb.GetPointVelocity(transform.position));
-            }
+
             // Jump
             if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isGrounded)
             {
