@@ -17,6 +17,7 @@ public class leaderMovement : MonoBehaviour
     bool spaceKeyDown = false;
     Rigidbody rb;
     AudioSource sound;
+    RaycastHit hit;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +28,13 @@ public class leaderMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+        /*
         if (col.gameObject.name == ("ground") && isGrounded == false)
         {
             isGrounded = true;
             Debug.Log("I have landed");
         }
+        */
 
         // ignore friends
         if (col.gameObject.tag == "friend")
@@ -40,6 +43,7 @@ public class leaderMovement : MonoBehaviour
         }
     }
 
+    /*
     void OnCollisionExit(Collision col)
     {
         if (col.gameObject.tag == ("ground"))
@@ -47,11 +51,13 @@ public class leaderMovement : MonoBehaviour
             isGrounded = false;
         }
     }
-
+    */
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        isGrounded = (Physics.Raycast(transform.position, Vector3.down, 1f));
+        Debug.Log(isGrounded);
         hasJumped = false;
         if (isLeader)
         {
@@ -79,7 +85,7 @@ public class leaderMovement : MonoBehaviour
                     hasJumped = true;
                     rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
                     Debug.Log("I HAVE JUMPED");
-                    isGrounded = false;
+                    //isGrounded = false;
                 }
             }
 
