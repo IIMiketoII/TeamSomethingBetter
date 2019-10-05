@@ -8,12 +8,11 @@ public class leaderMovement : MonoBehaviour
 {
     public float speed;
 
-    public bool isLeader = true;
+    public bool isLeader;
     public bool isGrounded;
     bool wKeyDown = false;
     bool spaceKeyDown = false;
     Rigidbody rb;
-    Vector3 vel;
 
     // Start is called before the first frame update
     void Start()
@@ -67,7 +66,6 @@ public class leaderMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        vel = rb.velocity;
         if (isLeader)
         {
             // Move right
@@ -85,13 +83,6 @@ public class leaderMovement : MonoBehaviour
             if ((wKeyDown || spaceKeyDown) && isGrounded)
             {
                 rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
-                isGrounded = false;
-            }
-
-            // Jump
-            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isGrounded)
-            {
-                rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
                 isGrounded = false;
             }
         }
