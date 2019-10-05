@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 562996616}
   - component: {fileID: 562996615}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,8 +410,8 @@ GameObject:
   - component: {fileID: 703475519}
   - component: {fileID: 703475518}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: cube
+  m_TagString: Climbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,10 +428,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!65 &703475519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -439,7 +439,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703475517}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f726ca0831e167a48bb433341463274d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 1217723988}
   - component: {fileID: 1217723987}
   - component: {fileID: 1217723986}
+  - component: {fileID: 1217723990}
   m_Layer: 0
   m_Name: Grapple Slime
   m_TagString: Untagged
@@ -785,12 +786,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217723985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.99, y: 1, z: 0.24}
+  m_LocalPosition: {x: -1.99, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1217723990
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217723985}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 1
 --- !u!1 &1589494060
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +822,7 @@ GameObject:
   - component: {fileID: 1589494061}
   - component: {fileID: 1589494066}
   - component: {fileID: 1589494065}
+  - component: {fileID: 1589494067}
   m_Layer: 0
   m_Name: Climb Slime
   m_TagString: Untagged
@@ -879,7 +897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589494060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.475, y: 1, z: -1.25}
+  m_LocalPosition: {x: 7.34, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -894,13 +912,13 @@ Rigidbody:
   m_GameObject: {fileID: 1589494060}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 4
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1589494066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -913,7 +931,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485773831fea15448a271bf5435b826d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  climbSpeed: 30
   player: {fileID: 1589494065}
+--- !u!114 &1589494067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589494060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa3f93e250ba8a4bb2fb2ea35bddea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1000
+  isLeader: 1
+  isGrounded: 0
 --- !u!1 &1603140389
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,8 +960,9 @@ GameObject:
   - component: {fileID: 1603140393}
   - component: {fileID: 1603140392}
   - component: {fileID: 1603140391}
-  - component: {fileID: 1603140390}
   - component: {fileID: 1603140395}
+  - component: {fileID: 1603140396}
+  - component: {fileID: 1603140390}
   m_Layer: 0
   m_Name: Teleport Slime
   m_TagString: Untagged
@@ -944,12 +979,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1603140389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba42695aa3368040a52687f260e71f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 11c8626cb4d968147a8792dcd5869048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashDistance: 5
-  dashSpeed: 60
+  dashDistance: 10
+  dashSpeed: 40
   player: {fileID: 1603140395}
+  movement: {fileID: 1603140396}
 --- !u!135 &1603140391
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1017,7 +1053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603140389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.07, y: 1, z: 0.33}
+  m_LocalPosition: {x: 3.81, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1036,6 +1072,21 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!114 &1603140396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603140389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa3f93e250ba8a4bb2fb2ea35bddea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  isLeader: 0
+  isGrounded: 0
