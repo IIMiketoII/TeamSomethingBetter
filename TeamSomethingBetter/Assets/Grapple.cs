@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,4 +49,4 @@ public class Grapple : MonoBehaviour
             child.position = Vector3.MoveTowards(child.position, node.transform.position, step);
         }
     }
-}*/
+}
