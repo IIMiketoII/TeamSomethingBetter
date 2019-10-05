@@ -51,7 +51,7 @@ public class sampleAgent : MonoBehaviour
             if (red.GetComponent<NavMeshAgent>().enabled == true && green.GetComponent<NavMeshAgent>().enabled == true)
             {
                 red.GetComponent<NavMeshAgent>().SetDestination(target2.position);
-                Debug.Log(target2.position);
+                //Debug.Log(target2.position);
                 green.GetComponent<NavMeshAgent>().SetDestination(target.position);
             }
         }
