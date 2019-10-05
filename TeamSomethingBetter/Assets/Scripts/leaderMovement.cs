@@ -15,18 +15,13 @@ public class leaderMovement : MonoBehaviour
     bool wKeyDown = false;
     bool spaceKeyDown = false;
     Rigidbody rb;
-
-    public GameObject red;
-    public GameObject green;
-    public GameObject blue;
+    AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        red = GameObject.Find("slimeRed");
-        green = GameObject.Find("slimeGreen");
-        blue = GameObject.Find("slimeBlue");
+        sound = GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter(Collision col)
@@ -78,6 +73,7 @@ public class leaderMovement : MonoBehaviour
             {
                 if (isGrounded == true)
                 {
+                    sound.Play();
                     rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
                     //WaitForSeconds(5);
                     blue.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);

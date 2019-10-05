@@ -58,7 +58,7 @@ public class Dash : MonoBehaviour
         }
 
         
-        if (kKeyDown && movement.isGrounded)
+        if (kKeyDown && movement.isGrounded && transform.gameObject.GetComponent<leaderMovement>().isLeader)
         {
             if (facingRight)
             {
