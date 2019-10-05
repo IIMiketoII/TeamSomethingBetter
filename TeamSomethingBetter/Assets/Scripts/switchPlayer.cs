@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class switchPlayer : MonoBehaviour
-
+    
     // Red: 1
     // Blue: 2
     // Green: 3
 
 {
+    /*
     public GameObject red;
     public GameObject blue;
     public GameObject green;
@@ -60,4 +61,5 @@ public class switchPlayer : MonoBehaviour
             timePassed = 0f;
         }
     }
+    */
 }
