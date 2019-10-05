@@ -10,6 +10,8 @@ public class leaderMovement : MonoBehaviour
 
     public bool isLeader = true;
     public bool isGrounded;
+    bool wKeyDown = false;
+    bool spaceKeyDown = false;
     Rigidbody rb;
     Vector3 vel;
 
@@ -41,32 +43,48 @@ public class leaderMovement : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            wKeyDown = true;
+        }
+        else
+        {
+            wKeyDown = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spaceKeyDown = true;
+        }
+        else
+        {
+            spaceKeyDown = false;
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         vel = rb.velocity;
         if (isLeader)
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            // Move right
+            if (Input.GetKey(KeyCode.D))
             {
-                // Move right
-                if (Input.GetKey(KeyCode.D))
-                {
-                    rb.AddForce(transform.right * Time.deltaTime * speed);
-                    //transform.Translate(speed * Time.deltaTime, 0, 0);
-                }
-                // Move left
-                if (Input.GetKey(KeyCode.A))
-                {
-                    rb.AddForce(transform.right * Time.deltaTime * -speed);
-                    //transform.Translate(-speed * Time.deltaTime, 0, 0);
-                }
+                rb.AddForce(transform.right * Time.deltaTime * speed, ForceMode.VelocityChange);
+            }
+            // Move left
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.AddForce(transform.right * Time.deltaTime * -speed, ForceMode.VelocityChange);
             }
 
             // Jump
-            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isGrounded)
+            if ((wKeyDown || spaceKeyDown) && isGrounded)
             {
-                rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
                 isGrounded = false;
             }
         }

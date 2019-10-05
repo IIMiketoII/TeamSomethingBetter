@@ -13,7 +13,6 @@ public class Climbing : MonoBehaviour
         {
             if (Input.GetKey("d") || Input.GetKey("a"))
             {
-                Debug.Log("Fuck");
                 player.AddForce(0, climbSpeed, 0);
             }
         }
