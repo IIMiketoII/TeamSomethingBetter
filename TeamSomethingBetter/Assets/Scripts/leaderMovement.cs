@@ -75,6 +75,12 @@ public class leaderMovement : MonoBehaviour
                 {
                     sound.Play();
                     rb.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
+                    //WaitForSeconds(5);
+                    blue.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
+                    Debug.Log(blue.GetComponent<Transform>().position);
+                    green.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
+                    //eventManager.TriggerEvent("jump");
+                    //Debug.Log("event jump");
                     Debug.Log("I HAVE JUMPED");
                     isGrounded = false;
                 }
