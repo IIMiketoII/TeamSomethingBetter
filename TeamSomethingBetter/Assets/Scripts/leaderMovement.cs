@@ -87,6 +87,13 @@ public class leaderMovement : MonoBehaviour
                 rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
                 isGrounded = false;
             }
+
+            // Jump
+            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isGrounded)
+            {
+                rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                isGrounded = false;
+            }
         }
     }
 }
