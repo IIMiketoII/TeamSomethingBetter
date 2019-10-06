@@ -61,7 +61,7 @@ public class leaderMovement : MonoBehaviour
         hasJumped = false;
         if (isLeader)
         {
-            GetComponent<NavMeshAgent>().enabled = false;
+            //GetComponent<NavMeshAgent>().enabled = false;
 
             // Move right
             if (Input.GetKey(KeyCode.D))
@@ -94,7 +94,7 @@ public class leaderMovement : MonoBehaviour
         }
         else
         {
-           GetComponent<NavMeshAgent>().enabled = true;
+           //GetComponent<NavMeshAgent>().enabled = true;
            transform.position = new Vector3 (transform.position.x,transform.position.y,0.0f);
         }
     }
