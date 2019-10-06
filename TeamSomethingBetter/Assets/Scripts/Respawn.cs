@@ -13,8 +13,9 @@ public class Respawn : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "checkpoint")
+        if (col.gameObject.tag == "Checkpoint")
         {
+            Debug.Log("wowzer");
             spawnPoint = col.transform.position;
         }
     }
