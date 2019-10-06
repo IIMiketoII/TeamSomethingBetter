@@ -12,7 +12,11 @@ public class sampleAgent : MonoBehaviour
     public GameObject green;
     public GameObject blue;
     //RigidBody rb;
-
+    /*
+    public Transform redLocation;
+    public Transform blueLocation;
+    public Transform greenLocation;
+    */
     // Start is called before the first frame update
     void Start()
     {
@@ -20,19 +24,23 @@ public class sampleAgent : MonoBehaviour
         green = GameObject.Find("slimeGreen");
         blue = GameObject.Find("slimeBlue");
         //rb = GetComponent<Rigidbody>();
-
+        red.GetComponent<leaderMovement>().isLeader = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        /*
+        redLocation = red.GetComponent<Transform>();
+        blueLocation = blue.GetComponent<Transform>();
+        greenLocation = green.GetComponent<Transform>();
+        */
         /*
         Vector3 nextPos = leader.transform.position;
         Vector3 correctPos = new Vector3(nextPos.x,nextPos.y,0);
         transform.position = correctPos;
         */
-
+        
         if (red.GetComponent<leaderMovement>().isLeader == true)
         {
             target = GameObject.Find("slimeRed").GetComponent<Transform>();
@@ -64,7 +72,7 @@ public class sampleAgent : MonoBehaviour
                 blue.GetComponent<NavMeshAgent>().SetDestination(target2.position);
             }
         }
-
+        
         // Jump together
 
 
