@@ -26,11 +26,13 @@ public class beegMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+        /*
         if (col.gameObject.name == ("ground") && isGrounded == false)
         {
             isGrounded = true;
             Debug.Log("I have landed");
         }
+        */
 
         if (col.gameObject.tag == ("breakable"))
         {
@@ -38,6 +40,7 @@ public class beegMovement : MonoBehaviour
         }
     }
 
+    /*
     void OnCollisionExit(Collision col)
     {
         if (col.gameObject.tag == ("ground"))
@@ -45,6 +48,7 @@ public class beegMovement : MonoBehaviour
             isGrounded = false;
         }
     }
+    */
 
     void FixedUpdate()
     {
@@ -62,6 +66,7 @@ public class beegMovement : MonoBehaviour
         }
 
         // Jump
+        /*
         if (((Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.Space))))
         {
             if (isGrounded == true)
@@ -71,11 +76,12 @@ public class beegMovement : MonoBehaviour
                 isGrounded = false;
             }
         }
+        */
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             green.SetActive(true);
             green.transform.position = transform.position;
