@@ -37,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1811622207829523216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.31, y: 1.16, z: 0}
-  m_LocalScale: {x: 1.8819, y: 1.8819, z: 1.8819}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 6202232717983533744}
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811622207829523216}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -309,7 +309,7 @@ MonoBehaviour:
   distanceToGrapple: 50
   GrappleLocation: {fileID: 0}
   GrappleNode: {fileID: 0}
-  Hook: {fileID: 0}
+  movement: {fileID: 0}
   hookTravelSpeed: 0
   playerTravelSpeed: 100
   pushSpeed: 50
@@ -347,17 +347,17 @@ PrefabInstance:
     - target: {fileID: 5708010193326125298, guid: cd5a0fd563d44dd4ca8e1a1b4e13079d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15526588
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5708010193326125298, guid: cd5a0fd563d44dd4ca8e1a1b4e13079d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: -0.002
       objectReference: {fileID: 0}
     - target: {fileID: 5708010193326125298, guid: cd5a0fd563d44dd4ca8e1a1b4e13079d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.2327967
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5708010193326125298, guid: cd5a0fd563d44dd4ca8e1a1b4e13079d,
         type: 3}

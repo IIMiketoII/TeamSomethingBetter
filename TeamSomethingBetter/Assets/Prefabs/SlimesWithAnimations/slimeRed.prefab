@@ -58,7 +58,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4919396903932186582}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -152,6 +152,7 @@ MonoBehaviour:
   isLeader: 1
   isGrounded: 0
   hasJumped: 0
+  frozen: 0
 --- !u!82 &4919396905523051401
 AudioSource:
   m_ObjectHideFlags: 0
@@ -280,6 +281,7 @@ MonoBehaviour:
   other1: {fileID: 0}
   other2: {fileID: 0}
   beeg: {fileID: 0}
+  poof: {fileID: 0}
   combineSpeed: 5
 --- !u!114 &4919396905523051392
 MonoBehaviour:
@@ -439,12 +441,12 @@ PrefabInstance:
     - target: {fileID: 3888041651920461481, guid: f76108d7a6b5b8a47963a9a82a5f8922,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19701302
+      value: 0.106
       objectReference: {fileID: 0}
     - target: {fileID: 3888041651920461481, guid: f76108d7a6b5b8a47963a9a82a5f8922,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.418779
+      value: 0.145
       objectReference: {fileID: 0}
     - target: {fileID: 3888041651920461481, guid: f76108d7a6b5b8a47963a9a82a5f8922,
         type: 3}

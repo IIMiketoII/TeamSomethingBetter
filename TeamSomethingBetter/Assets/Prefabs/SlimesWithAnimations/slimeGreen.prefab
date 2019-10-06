@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 3477860408818262274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.38, y: 1.16, z: 0}
-  m_LocalScale: {x: 1.8819, y: 1.8819, z: 1.8819}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8346314577056188329}
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3477860408818262274}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -151,6 +151,7 @@ MonoBehaviour:
   isLeader: 0
   isGrounded: 0
   hasJumped: 0
+  frozen: 0
 --- !u!82 &3477860410548787811
 AudioSource:
   m_ObjectHideFlags: 0
@@ -276,6 +277,7 @@ MonoBehaviour:
   other1: {fileID: 0}
   other2: {fileID: 0}
   beeg: {fileID: 0}
+  poof: {fileID: 0}
   combineSpeed: 5
 --- !u!114 &3477860410548787818
 MonoBehaviour:
@@ -326,17 +328,17 @@ PrefabInstance:
     - target: {fileID: 4870580868659805620, guid: 761e0426088154441bc2fc35cf324939,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.16934651
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: 4870580868659805620, guid: 761e0426088154441bc2fc35cf324939,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.23580365
+      value: 0.072
       objectReference: {fileID: 0}
     - target: {fileID: 4870580868659805620, guid: 761e0426088154441bc2fc35cf324939,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.397524
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4870580868659805620, guid: 761e0426088154441bc2fc35cf324939,
         type: 3}
