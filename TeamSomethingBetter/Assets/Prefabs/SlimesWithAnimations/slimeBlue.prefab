@@ -152,6 +152,7 @@ MonoBehaviour:
   isLeader: 0
   isGrounded: 0
   hasJumped: 0
+  frozen: 0
 --- !u!135 &1811622208527494932
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -276,6 +277,7 @@ MonoBehaviour:
   other1: {fileID: 0}
   other2: {fileID: 0}
   beeg: {fileID: 0}
+  poof: {fileID: 0}
   combineSpeed: 5
 --- !u!114 &1811622208527494952
 MonoBehaviour:
