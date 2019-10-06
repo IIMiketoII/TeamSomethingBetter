@@ -7,7 +7,6 @@ public class NewGrapple : MonoBehaviour
     public float distanceToGrapple;
     public Transform GrappleLocation;
     public GameObject GrappleNode;
-    public GameObject Hook;
     public leaderMovement movement;
 
     public float hookTravelSpeed;
@@ -17,6 +16,9 @@ public class NewGrapple : MonoBehaviour
     public static bool hooked;
 
     private float currentDistance;
+
+    LineRenderer hook;
+
 
 
     // Start is called before the first frame update
