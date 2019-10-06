@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public float SlowDownAmount;
     public float SlowDownAmountMax;
 
+    public bool follow;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,17 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02F;
             toggleTime = false;
+        }
+
+        if (Input.GetKeyDown("c"))
+        {
+            if (follow)
+            {
+                follow = false;
+            } else if (!follow)
+            {
+                follow = true;
+            }
         }
 
         //Switch Character Functionality
