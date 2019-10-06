@@ -31,6 +31,11 @@ public class beegMovement : MonoBehaviour
             isGrounded = true;
             Debug.Log("I have landed");
         }
+
+        if (col.gameObject.tag == ("breakable"))
+        {
+            Destroy(col.gameObject);
+        }
     }
 
     void OnCollisionExit(Collision col)
