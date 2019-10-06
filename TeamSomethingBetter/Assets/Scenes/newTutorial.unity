@@ -2236,30 +2236,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4937011155260575657, guid: 0d311358998007048b388c7e215cad52,
-        type: 3}
-      propertyPath: m_TagString
-      value: ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 4937011155260575657, guid: 0d311358998007048b388c7e215cad52,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6117217103671177794, guid: 0d311358998007048b388c7e215cad52,
-        type: 3}
-      propertyPath: m_TagString
-      value: ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 6117217103671177794, guid: 0d311358998007048b388c7e215cad52,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3270008632430030181, guid: 0d311358998007048b388c7e215cad52,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937011155260575657, guid: 0d311358998007048b388c7e215cad52,
+        type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937011155260575657, guid: 0d311358998007048b388c7e215cad52,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117217103671177794, guid: 0d311358998007048b388c7e215cad52,
+        type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117217103671177794, guid: 0d311358998007048b388c7e215cad52,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3270008632430030181, guid: 0d311358998007048b388c7e215cad52, type: 3}
@@ -4365,10 +4365,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1323851919, guid: 8171658633342dc44a37957408c13093, type: 3}
-      propertyPath: MinDistance
-      value: 0.2727089
-      objectReference: {fileID: 0}
     - target: {fileID: 1323851908, guid: 8171658633342dc44a37957408c13093, type: 3}
       propertyPath: fire
       value: 
@@ -4422,6 +4418,10 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323851919, guid: 8171658633342dc44a37957408c13093, type: 3}
+      propertyPath: MinDistance
+      value: 0.2727089
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8171658633342dc44a37957408c13093, type: 3}
