@@ -10,6 +10,8 @@ public class beegMovement : MonoBehaviour
     public bool isGrounded;
     Rigidbody rb;
 
+    public ParticleSystem smash;
+
     public GameObject green;
     public GameObject red;
     public GameObject blue;
@@ -17,6 +19,7 @@ public class beegMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        smash.Pause();
         /*
         green = GameObject.Find("slimeGreen");
         red = GameObject.Find("slimeRed");
@@ -36,6 +39,8 @@ public class beegMovement : MonoBehaviour
 
         if (col.gameObject.tag == ("breakable"))
         {
+            smash.transform.position = col.transform.position;
+            smash.Emit(100);
             Destroy(col.gameObject);
         }
     }
