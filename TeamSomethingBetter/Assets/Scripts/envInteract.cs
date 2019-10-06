@@ -5,7 +5,9 @@ using UnityEngine;
 public class envInteract : MonoBehaviour
 {
     public GameObject lever, button;
-    public GameObject wallDestroy, wallMove;
+    public GameObject wallMove;
+
+    bool activated = false;
 
     // Update is called once per frame
     void Update()
@@ -38,7 +40,7 @@ public class envInteract : MonoBehaviour
 
     void OnTriggerExit (Collider col)
     {
-        if (col.gameObject.GetComponent<leaderMovement>().isLeader)
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "button")
         {
             Debug.Log("plop");
             wallMove.SetActive(true);
@@ -48,10 +50,26 @@ public class envInteract : MonoBehaviour
 
     void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.GetComponent<leaderMovement>().isLeader)
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "button") 
         {
             Debug.Log("asoidnkmlaksd");
             wallMove.SetActive(false);
+        }
+
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "lever")
+        {
+            //Debug.Log("asoidnkmlaksd");
+            if (!activated)
+            {
+                wallMove.SetActive(false);
+                activated = true;
+            }
+            else
+            {
+                wallMove.SetActive(true);
+                activated = false;
+            }
+            
         }
     }
 }
