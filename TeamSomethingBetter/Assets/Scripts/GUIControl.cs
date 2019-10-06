@@ -11,6 +11,7 @@ public class GUIControl : MonoBehaviour
 
     public GameObject red, green, blue;
     public GameObject manager;
+    public GameObject follow, unfollow;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,9 @@ public class GUIControl : MonoBehaviour
         green = GameObject.Find("slimeGreen");
         blue = GameObject.Find("slimeBlue");
         manager = GameObject.Find("GameManager");
+
+        follow = GameObject.Find("Follow");
+        unfollow = GameObject.Find("Unfollow");
 
         timeBar = GameObject.Find("timeBar");
         timeBar.GetComponent<Image>().fillAmount = 1.0f;
@@ -77,6 +81,18 @@ public class GUIControl : MonoBehaviour
         if (manager.GetComponent<GameManager>().SlowDownAmount > 0)
         {
             //timeBar.GetComponent<Image>().fillAmount = manager.GetComponent<GameManager>().SlowDownAmount;
+        }
+
+        // follow
+        if (manager.GetComponent<GameManager>().follow)
+        {
+            follow.GetComponent<Image>().enabled = true;
+            unfollow.GetComponent<Image>().enabled = false;
+        }
+        else
+        {
+            follow.GetComponent<Image>().enabled = false;
+            unfollow.GetComponent<Image>().enabled = true;
         }
     }
 }
