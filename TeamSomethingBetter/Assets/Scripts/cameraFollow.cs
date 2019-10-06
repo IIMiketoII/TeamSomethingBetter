@@ -13,7 +13,7 @@ public class cameraFollow : MonoBehaviour
         red = GameObject.Find("slimeRed");
         green = GameObject.Find("slimeGreen");
         blue = GameObject.Find("slimeBlue");
-        beeg = GameObject.Find("beeg");
+        //beeg = GameObject.Find("beeg");
     }
 
     void FixedUpdate ()

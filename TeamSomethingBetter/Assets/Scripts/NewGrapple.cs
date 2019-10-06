@@ -8,6 +8,7 @@ public class NewGrapple : MonoBehaviour
     public Transform GrappleLocation;
     public GameObject GrappleNode;
     public GameObject Hook;
+    public leaderMovement movement;
 
     public float hookTravelSpeed;
     public float playerTravelSpeed;
@@ -21,7 +22,7 @@ public class NewGrapple : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        movement = GetComponent<leaderMovement>();
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class NewGrapple : MonoBehaviour
             GrappleLocation = GrappleNode.transform;
         }
 
-        if ((Input.GetKey("e")) && (GrappleNode != null)){
+        if ((Input.GetKey("k")) && (GrappleNode != null) && movement.isLeader){
             //Hook.transform.position = Vector3.MoveTowards(Hook.transform.position, GrappleNode.transform.position, hookTravelSpeed);
             this.GetComponent<Rigidbody>().AddForce((GrappleNode.transform.position - transform.position).normalized * playerTravelSpeed);
             hooked = true;
