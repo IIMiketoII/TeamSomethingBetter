@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 448160880}
   - component: {fileID: 448160881}
   - component: {fileID: 448160893}
+  - component: {fileID: 448160889}
   m_Layer: 9
   m_Name: slimeGreen
   m_TagString: friend
@@ -149,6 +150,7 @@ MonoBehaviour:
   isLeader: 0
   isGrounded: 0
   hasJumped: 0
+  frozen: 0
 --- !u!82 &448160891
 AudioSource:
   m_ObjectHideFlags: 0
@@ -274,6 +276,7 @@ MonoBehaviour:
   other1: {fileID: 0}
   other2: {fileID: 0}
   beeg: {fileID: 0}
+  poof: {fileID: 0}
   combineSpeed: 5
 --- !u!114 &448160893
 MonoBehaviour:
@@ -294,3 +297,18 @@ MonoBehaviour:
   DistanceToForget: 5
   AISpeed: 20
   redFollow: {fileID: 0}
+--- !u!114 &448160889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256980198455008558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35514ce836873a34aa9cf784aee47069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {x: -5, y: 1, z: 0}
+  other1: {fileID: 0}
+  other2: {fileID: 0}

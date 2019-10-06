@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1022314388}
   - component: {fileID: 1022314401}
   - component: {fileID: 1022314402}
+  - component: {fileID: 1022314396}
   m_Layer: 9
   m_Name: slimeBlue
   m_TagString: friend
@@ -150,6 +151,7 @@ MonoBehaviour:
   isLeader: 0
   isGrounded: 0
   hasJumped: 0
+  frozen: 0
 --- !u!135 &1022314400
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -274,6 +276,7 @@ MonoBehaviour:
   other1: {fileID: 0}
   other2: {fileID: 0}
   beeg: {fileID: 0}
+  poof: {fileID: 0}
   combineSpeed: 5
 --- !u!114 &1022314401
 MonoBehaviour:
@@ -313,3 +316,18 @@ MonoBehaviour:
   DistanceToForget: 5
   AISpeed: 20
   redFollow: {fileID: 0}
+--- !u!114 &1022314396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563131662895733029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35514ce836873a34aa9cf784aee47069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {x: -5, y: 1, z: 0}
+  other1: {fileID: 0}
+  other2: {fileID: 0}

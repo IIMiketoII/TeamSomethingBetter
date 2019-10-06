@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class envInteract : MonoBehaviour
 {
-    public GameObject lever, button;
     public GameObject wallMove;
+    public Canvas blackScreen;
 
     bool activated = false;
 
@@ -48,9 +48,9 @@ public class envInteract : MonoBehaviour
         
     }
 
-    void OnTriggerEnter (Collider col)
+    void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "button") 
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "button")
         {
             Debug.Log("asoidnkmlaksd");
             wallMove.SetActive(false);
@@ -69,7 +69,17 @@ public class envInteract : MonoBehaviour
                 wallMove.SetActive(true);
                 activated = false;
             }
-            
+
+        }
+
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "death")
+        {
+            if (blackScreen.gameObject.activeSelf)
+            {
+                blackScreen.gameObject.SetActive(false);
+            }
+            blackScreen.gameObject.SetActive(true);
+            col.GetComponent<Respawn>().Spawn();
         }
     }
 }
