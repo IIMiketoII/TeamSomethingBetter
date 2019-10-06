@@ -9,6 +9,7 @@ TagManager:
   - friend
   - GrappleNode
   - breakable
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

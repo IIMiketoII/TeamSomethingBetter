@@ -5765,8 +5765,8 @@ MonoBehaviour:
   GrappleNode: {fileID: 0}
   Hook: {fileID: 0}
   hookTravelSpeed: 0
-  playerTravelSpeed: 50
-  pushSpeed: 40
+  playerTravelSpeed: 100
+  pushSpeed: 50
 --- !u!114 &1022314402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6670,11 +6670,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: slimeBlue
       objectReference: {fileID: 0}
-    - target: {fileID: 2563131662895733039, guid: 3327dd793f362f044b339f4e1117e4ba,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 2563131662895733035, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6740,6 +6735,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2563131662895733039, guid: 3327dd793f362f044b339f4e1117e4ba,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2563131662895733038, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
       propertyPath: m_Enabled
@@ -6760,16 +6760,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: slimeGreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 4256980198455008528, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4256980198455008559, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
-        type: 3}
-      propertyPath: m_Drag
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008532, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
@@ -6826,10 +6816,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4256980198455008559, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008533, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256980198455008528, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008529, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
@@ -6941,16 +6941,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: slimeRed
       objectReference: {fileID: 0}
-    - target: {fileID: 8885563763009675745, guid: 8171658633342dc44a37957408c13093,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8885563763009675750, guid: 8171658633342dc44a37957408c13093,
-        type: 3}
-      propertyPath: m_Drag
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675754, guid: 8171658633342dc44a37957408c13093,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7006,10 +6996,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675750, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675751, guid: 8171658633342dc44a37957408c13093,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675745, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675746, guid: 8171658633342dc44a37957408c13093,
         type: 3}
