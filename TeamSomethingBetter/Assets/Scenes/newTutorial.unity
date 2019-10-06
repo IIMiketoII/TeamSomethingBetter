@@ -1062,6 +1062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrackedRock 1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3761,6 +3766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrackedRock 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5841,6 +5851,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Climbable
       objectReference: {fileID: 0}
+    - target: {fileID: 6411462906359827028, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
     - target: {fileID: 6411462906359827031, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -6960,6 +6975,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Climbable
       objectReference: {fileID: 0}
+    - target: {fileID: 6411462906359827028, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
     - target: {fileID: 6411462906359827031, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -7237,6 +7257,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrackedRock 1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
       objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
@@ -8458,6 +8483,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrackedRock 1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8566,6 +8596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrackedRock 1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
       objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
@@ -13453,6 +13488,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrackedRock 1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15610,6 +15650,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Climbable
       objectReference: {fileID: 0}
+    - target: {fileID: 6411462906359827028, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
     - target: {fileID: 6411462906359827031, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -17305,6 +17350,11 @@ PrefabInstance:
       value: greenWallNoGrss (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1107852521686162705, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411462906359827028, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
         type: 3}
       propertyPath: m_TagString
       value: Climbable
@@ -19522,6 +19572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrackedRock 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21035,6 +21090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrackedRock 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21610,6 +21670,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Climbable
       objectReference: {fileID: 0}
+    - target: {fileID: 6411462906359827028, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
     - target: {fileID: 6411462906359827031, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -21940,6 +22005,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Climbable
       objectReference: {fileID: 0}
+    - target: {fileID: 6411462906359827028, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
     - target: {fileID: 6411462906359827031, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -22189,6 +22259,11 @@ PrefabInstance:
       value: greenWallNoGrss (6)
       objectReference: {fileID: 0}
     - target: {fileID: 1107852521686162705, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411462906359827028, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
         type: 3}
       propertyPath: m_TagString
       value: Climbable
@@ -22603,6 +22678,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrackedRock 1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22829,6 +22909,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrackedRock 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
       objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
@@ -23105,6 +23190,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrackedRock 1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
       objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
@@ -23693,6 +23783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrackedRock 1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677689672639684421, guid: e29b8c97c5a9a454b923b9f63ec74a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: breakable
       objectReference: {fileID: 0}
     - target: {fileID: 8687564026667953494, guid: e29b8c97c5a9a454b923b9f63ec74a36,
         type: 3}
@@ -24522,6 +24617,11 @@ PrefabInstance:
       value: greenWallNoGrss (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1107852521686162705, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411462906359827028, guid: 168d8b219c0a72f4fb57088ea1e8ad0f,
         type: 3}
       propertyPath: m_TagString
       value: Climbable
