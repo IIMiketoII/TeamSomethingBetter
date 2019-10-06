@@ -1422,17 +1422,17 @@ PrefabInstance:
     - target: {fileID: 5102602316387412055, guid: 58522d6791f93af4596b7df1325c0e5f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -209
+      value: -228
       objectReference: {fileID: 0}
     - target: {fileID: 5102602316387412055, guid: 58522d6791f93af4596b7df1325c0e5f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53
+      value: -57
       objectReference: {fileID: 0}
     - target: {fileID: 5102602316387412054, guid: 58522d6791f93af4596b7df1325c0e5f,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5102602316387412054, guid: 58522d6791f93af4596b7df1325c0e5f,
         type: 3}
@@ -1478,6 +1478,16 @@ PrefabInstance:
     - target: {fileID: 5102602316387412054, guid: 58522d6791f93af4596b7df1325c0e5f,
         type: 3}
       propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102602316387412054, guid: 58522d6791f93af4596b7df1325c0e5f,
+        type: 3}
+      propertyPath: m_text
+      value: YOU WIN!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102602317391274047, guid: 58522d6791f93af4596b7df1325c0e5f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5102602317391274046, guid: 58522d6791f93af4596b7df1325c0e5f,
@@ -1560,6 +1570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: PLAY
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102602316385652675, guid: 58522d6791f93af4596b7df1325c0e5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5102602316385652674, guid: 58522d6791f93af4596b7df1325c0e5f,
         type: 3}
