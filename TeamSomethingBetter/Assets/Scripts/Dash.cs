@@ -8,7 +8,6 @@ public class Dash : MonoBehaviour
     public float dashDistance = 10f;
     public float dashSpeed = 40f;
     public Rigidbody player;
-    //public VisualEffect fire;
     public ParticleSystem fire;
 
     public leaderMovement movement;

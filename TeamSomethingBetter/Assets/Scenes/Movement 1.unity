@@ -210,7 +210,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &164014541
 GameObject:
@@ -5284,6 +5284,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7136721418233337101, guid: d3dab98da40cc664693e412141ec3ddd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7136721418233337097, guid: d3dab98da40cc664693e412141ec3ddd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5598,7 +5603,7 @@ PrefabInstance:
     - target: {fileID: 791479371646382387, guid: d2e0eb5ec8c98dc48af1b58677a34b66,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 791479371646382387, guid: d2e0eb5ec8c98dc48af1b58677a34b66,
         type: 3}
@@ -5857,8 +5862,8 @@ MonoBehaviour:
   GrappleNode: {fileID: 0}
   Hook: {fileID: 0}
   hookTravelSpeed: 0
-  playerTravelSpeed: 50
-  pushSpeed: 40
+  playerTravelSpeed: 100
+  pushSpeed: 50
 --- !u!114 &1022314402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6921,11 +6926,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: slimeBlue
       objectReference: {fileID: 0}
-    - target: {fileID: 2563131662895733039, guid: 3327dd793f362f044b339f4e1117e4ba,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 2563131662895733035, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6991,14 +6991,19 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2563131662895733039, guid: 3327dd793f362f044b339f4e1117e4ba,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2563131662895733038, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2563131662895733031, guid: 3327dd793f362f044b339f4e1117e4ba, type: 3}
     - {fileID: 2563131662895733038, guid: 3327dd793f362f044b339f4e1117e4ba, type: 3}
+    - {fileID: 2563131662895733031, guid: 3327dd793f362f044b339f4e1117e4ba, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3327dd793f362f044b339f4e1117e4ba, type: 3}
 --- !u!1001 &4256980199269745204
 PrefabInstance:
@@ -7011,16 +7016,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: slimeGreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 4256980198455008528, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4256980198455008559, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
-        type: 3}
-      propertyPath: m_Drag
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008532, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
@@ -7077,10 +7072,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4256980198455008559, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008533, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256980198455008528, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008529, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
@@ -7088,8 +7093,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4256980198455008533, guid: 9694c2b9cdc2aab4fbb356ad34f462a9, type: 3}
     - {fileID: 4256980198455008529, guid: 9694c2b9cdc2aab4fbb356ad34f462a9, type: 3}
+    - {fileID: 4256980198455008533, guid: 9694c2b9cdc2aab4fbb356ad34f462a9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9694c2b9cdc2aab4fbb356ad34f462a9, type: 3}
 --- !u!1001 &4870895445895290700
 PrefabInstance:
@@ -7176,7 +7181,7 @@ PrefabInstance:
     - target: {fileID: 914850837290185376, guid: 66c4731a108ef9f4bb41eaedef9219d1,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c4731a108ef9f4bb41eaedef9219d1, type: 3}
@@ -7191,16 +7196,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: slimeRed
-      objectReference: {fileID: 0}
-    - target: {fileID: 8885563763009675745, guid: 8171658633342dc44a37957408c13093,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8885563763009675750, guid: 8171658633342dc44a37957408c13093,
-        type: 3}
-      propertyPath: m_Drag
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675754, guid: 8171658633342dc44a37957408c13093,
         type: 3}
@@ -7257,10 +7252,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675750, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675751, guid: 8171658633342dc44a37957408c13093,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675745, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675746, guid: 8171658633342dc44a37957408c13093,
         type: 3}
@@ -7268,6 +7273,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 8885563763009675751, guid: 8171658633342dc44a37957408c13093, type: 3}
     - {fileID: 8885563763009675746, guid: 8171658633342dc44a37957408c13093, type: 3}
+    - {fileID: 8885563763009675751, guid: 8171658633342dc44a37957408c13093, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8171658633342dc44a37957408c13093, type: 3}
