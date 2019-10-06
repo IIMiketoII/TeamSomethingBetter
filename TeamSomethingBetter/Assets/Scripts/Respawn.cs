@@ -11,7 +11,7 @@ public class Respawn : MonoBehaviour
         transform.position = spawnPoint;
     }
 
-    void OnTriggerEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "checkpoint")
         {
