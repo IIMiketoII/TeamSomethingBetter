@@ -5427,34 +5427,6 @@ MonoBehaviour:
   other2: {fileID: 1323851907}
   beeg: {fileID: 1977207030}
   combineSpeed: 5
---- !u!114 &448160882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448160879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f898c755163b5649bf717a600bd927e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement: {fileID: 448160883}
-  other1: {fileID: 1022314387}
-  other2: {fileID: 1323851907}
-  jumpHeight: 10
---- !u!114 &448160883 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4256980198455008528, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 4256980199269745204}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448160879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa3f93e250ba8a4bb2fb2ea35bddea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &448160886 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 4256980198455008559, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
@@ -5667,34 +5639,6 @@ MonoBehaviour:
   other2: {fileID: 1323851907}
   beeg: {fileID: 1977207030}
   combineSpeed: 5
---- !u!114 &1022314389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022314387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f898c755163b5649bf717a600bd927e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement: {fileID: 1022314390}
-  other1: {fileID: 448160879}
-  other2: {fileID: 1323851907}
-  jumpHeight: 10
---- !u!114 &1022314390 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2563131662895733039, guid: 3327dd793f362f044b339f4e1117e4ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 2563131661445614209}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022314387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa3f93e250ba8a4bb2fb2ea35bddea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1022314398
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5816,13 +5760,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b6d62ca6f76be4c9132dd9cd73c087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToGrapple: 0
+  distanceToGrapple: 50
   GrappleLocation: {fileID: 0}
   GrappleNode: {fileID: 0}
   Hook: {fileID: 0}
   hookTravelSpeed: 0
-  playerTravelSpeed: 0
-  pushSpeed: 0
+  playerTravelSpeed: 50
+  pushSpeed: 40
 --- !u!114 &1022314402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6726,6 +6670,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: slimeBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 2563131662895733039, guid: 3327dd793f362f044b339f4e1117e4ba,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2563131662895733035, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6764,7 +6713,7 @@ PrefabInstance:
     - target: {fileID: 2563131662895733035, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2563131662895733035, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
@@ -6784,17 +6733,12 @@ PrefabInstance:
     - target: {fileID: 2563131662895733028, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
       propertyPath: m_Drag
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2563131662895733031, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2563131662895733039, guid: 3327dd793f362f044b339f4e1117e4ba,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2563131662895733038, guid: 3327dd793f362f044b339f4e1117e4ba,
         type: 3}
@@ -6816,6 +6760,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: slimeGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256980198455008528, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256980198455008559, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008532, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
@@ -6855,7 +6809,7 @@ PrefabInstance:
     - target: {fileID: 4256980198455008532, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008532, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
@@ -6872,20 +6826,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4256980198455008559, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008533, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4256980198455008528, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4256980198455008529, guid: 9694c2b9cdc2aab4fbb356ad34f462a9,
         type: 3}
@@ -6946,7 +6890,7 @@ PrefabInstance:
     - target: {fileID: 4870895446037235669, guid: 66c4731a108ef9f4bb41eaedef9219d1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4870895446037235669, guid: 66c4731a108ef9f4bb41eaedef9219d1,
         type: 3}
@@ -6996,6 +6940,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: slimeRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675745, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675750, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675754, guid: 8171658633342dc44a37957408c13093,
         type: 3}
@@ -7052,20 +7006,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8885563763009675750, guid: 8171658633342dc44a37957408c13093,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675751, guid: 8171658633342dc44a37957408c13093,
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8885563763009675745, guid: 8171658633342dc44a37957408c13093,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8885563763009675746, guid: 8171658633342dc44a37957408c13093,
         type: 3}
