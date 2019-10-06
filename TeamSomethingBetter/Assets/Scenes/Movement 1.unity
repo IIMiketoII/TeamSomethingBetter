@@ -7234,6 +7234,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675754, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675754, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675754, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675748, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885563763009675749, guid: 8171658633342dc44a37957408c13093,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323851919, guid: 8171658633342dc44a37957408c13093, type: 3}
+      propertyPath: MinDistance
+      value: 0.28086746
+      objectReference: {fileID: 0}
     - target: {fileID: 1323851908, guid: 8171658633342dc44a37957408c13093, type: 3}
       propertyPath: fire
       value: 
