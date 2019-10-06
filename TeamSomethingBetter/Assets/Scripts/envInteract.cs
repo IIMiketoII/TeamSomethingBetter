@@ -56,7 +56,7 @@ public class envInteract : MonoBehaviour
             wallMove.SetActive(false);
         }
 
-        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "lever")
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "openLever")
         {
             //Debug.Log("asoidnkmlaksd");
             if (!activated)
@@ -67,6 +67,22 @@ public class envInteract : MonoBehaviour
             else
             {
                 wallMove.SetActive(true);
+                activated = false;
+            }
+
+        }
+
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader && transform.gameObject.name == "closeLever")
+        {
+            //Debug.Log("asoidnkmlaksd");
+            if (!activated)
+            {
+                wallMove.SetActive(true);
+                activated = true;
+            }
+            else
+            {
+                wallMove.SetActive(false);
                 activated = false;
             }
 

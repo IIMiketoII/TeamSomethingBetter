@@ -6,29 +6,37 @@ public class cameraFollow : MonoBehaviour
     public float smooth = 0.125f;
     public Vector3 offset;
 
-    public GameObject red, green, blue;
+    public GameObject red, green, blue, beeg;
 
     void Start()
     {
         red = GameObject.Find("slimeRed");
         green = GameObject.Find("slimeGreen");
         blue = GameObject.Find("slimeBlue");
+        //beeg = GameObject.Find("beeg");
     }
 
     void FixedUpdate ()
     {
-        // follow red if leader
-        if (red.GetComponent<leaderMovement>().isLeader == true)
+        if (beeg.activeSelf)
         {
-            target = red.GetComponent<Transform>();
+            target = beeg.GetComponent<Transform>();
         }
-        if (green.GetComponent<leaderMovement>().isLeader == true)
+        else
         {
-            target = green.GetComponent<Transform>();
-        }
-        if (blue.GetComponent<leaderMovement>().isLeader == true)
-        {
-            target = blue.GetComponent<Transform>();
+            // follow red if leader
+            if (red.GetComponent<leaderMovement>().isLeader == true)
+            {
+                target = red.GetComponent<Transform>();
+            }
+            if (green.GetComponent<leaderMovement>().isLeader == true)
+            {
+                target = green.GetComponent<Transform>();
+            }
+            if (blue.GetComponent<leaderMovement>().isLeader == true)
+            {
+                target = blue.GetComponent<Transform>();
+            }
         }
 
         Vector3 desiredPos = target.position + offset;
