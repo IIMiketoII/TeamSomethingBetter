@@ -76,7 +76,7 @@ public class GUIControl : MonoBehaviour
         // timeBar
         if (manager.GetComponent<GameManager>().SlowDownAmount > 0)
         {
-            timeBar.GetComponent<Image>().fillAmount = manager.GetComponent<GameManager>().SlowDownAmount;
+            //timeBar.GetComponent<Image>().fillAmount = manager.GetComponent<GameManager>().SlowDownAmount;
         }
     }
 }
