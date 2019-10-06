@@ -4,31 +4,22 @@ using UnityEngine;
 
 public class envInteract : MonoBehaviour
 {
-    public GameObject red, green, blue;
     public GameObject lever, button;
     public GameObject wallDestroy, wallMove;
-    public Collider col;
-
-    bool activated = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        red = GameObject.Find("slimeRed");
-        green = GameObject.Find("slimeGreen");
-        blue = GameObject.Find("slimeBlue");
-
-        lever = GameObject.Find("lever");
-        button = GameObject.Find("button");
-
-        wallDestroy = GameObject.Find("wallDestroy");
-        wallMove = GameObject.Find("wallMove");
-        wallMove.GetComponent<Renderer>().enabled = true;
-    }
 
     // Update is called once per frame
     void Update()
     {
+        /*
+        if (activated)
+        {
+            wallMove.SetActive(false);
+        }
+        else
+        {
+            wallMove.SetActive(true);
+        }
+        /*
         if (red.GetComponent<leaderMovement>().isLeader == true)
         {
             col = red.GetComponent<Collider>();
@@ -42,28 +33,25 @@ public class envInteract : MonoBehaviour
             col = blue.GetComponent<Collider>();
         }
         OnTriggerStay(col);
+        */
     }
 
-    /*void OnTriggerExit (Collider other)
+    void OnTriggerExit (Collider col)
     {
-        if (activated == false)
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader)
         {
-            activated = true;
-            Destroy(wallDestroy);
-            lever.transform.Rotate(0,0,-30,Space.Self);
+            Debug.Log("plop");
+            wallMove.SetActive(true);
         }
         
-    }*/
+    }
 
-    void OnTriggerStay (Collider other)
+    void OnTriggerEnter (Collider col)
     {
-        if (wallMove.GetComponent<Renderer>().enabled == true)
+        if (col.gameObject.GetComponent<leaderMovement>().isLeader)
         {
-            wallMove.GetComponent<Renderer>().enabled = false;
+            Debug.Log("asoidnkmlaksd");
+            wallMove.SetActive(false);
         }
-        /*else
-        {
-            wallMove.GetComponent<Renderer>().enabled = true;
-        }*/
     }
 }

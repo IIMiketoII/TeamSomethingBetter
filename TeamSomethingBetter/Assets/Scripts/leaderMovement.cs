@@ -18,6 +18,7 @@ public class leaderMovement : MonoBehaviour
     Rigidbody rb;
     AudioSource sound;
     RaycastHit hit;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +57,9 @@ public class leaderMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        isGrounded = (Physics.Raycast(transform.position, Vector3.down, 1f));
+        int layerMask = 1 << 9;
+        layerMask = ~layerMask;
+        isGrounded = (Physics.Raycast(transform.position, Vector3.down, 1f, layerMask));
         Debug.Log(isGrounded);
         hasJumped = false;
         if (isLeader)
