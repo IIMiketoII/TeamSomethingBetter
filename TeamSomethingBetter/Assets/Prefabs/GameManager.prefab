@@ -47,6 +47,10 @@ MonoBehaviour:
   red: {fileID: 0}
   blue: {fileID: 0}
   green: {fileID: 0}
+  toggleTime: 0
+  SlowDownAmount: 0
+  SlowDownAmountMax: 0
+  follow: 1
 --- !u!114 &914850837290185376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,3 +63,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84823a0883208b04599f8487125d35fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  greenSelected: {fileID: 0}
+  redSelected: {fileID: 0}
+  blueSelected: {fileID: 0}
+  greenUnselected: {fileID: 0}
+  redUnselected: {fileID: 0}
+  blueUnselected: {fileID: 0}
+  timeBar: {fileID: 0}
+  red: {fileID: 0}
+  green: {fileID: 0}
+  blue: {fileID: 0}
+  manager: {fileID: 0}
